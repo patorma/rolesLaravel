@@ -18,16 +18,32 @@ class TodosSeeder extends Seeder
     {
         $useradmin = User::create([
             'name' => 'admin paula',
-            'email' => 'admin@gmail.com',
+            'email' => 'superadmin@gmail.com',
             'password' => Hash::make('admin'),
-            'fullacces' => 'yes',
+            'tipo' => 1,
             'codigo' => 'adm1',
         ]);
+        $useradmin = User::create([
+            'name' => 'super admin',
+            'email' => 'admins@gmail.com',
+            'password' => Hash::make('admin'),
+            'tipo' => 2,
+            'codigo' => 'admin2',
+        ]);
+
+        $useradmin = User::create([
+            'name' => 'el moderador',
+            'email' => 'moderadors@gmail.com',
+            'password' => Hash::make('admin'),
+            'tipo' => 3,
+            'codigo' => 'admin3',
+        ]);
+
         $user1 = User::create([
-            'name' => 'usuario marcos',
+            'name' => 'Usuario Marcos',
             'email' => 'marcos@gmail.com',
             'password' => Hash::make('marcos'),
-            'fullacces' => 'no',
+            'tipo' => 4,
             'codigo' => 'casa1',
         ]);
     }

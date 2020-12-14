@@ -24,10 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home'); // la ruta home sera solo para el administrador
     }
 
     public function getUser(){
         return view('user');
+    }
+
+    public function getModerador(){
+        return view('moderador');
+    }
+
+    public function getSuper(){
+        return view('superAdmin');
     }
 }

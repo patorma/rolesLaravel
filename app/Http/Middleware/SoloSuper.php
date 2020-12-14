@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class SoloAdmin
+class SoloSuper
 {
     /**
      * Handle an incoming request.
@@ -19,23 +19,19 @@ class SoloAdmin
     {
         switch (Auth::user()->tipo) {
             case ('1'):
-                   return redirect('superAdmin'); // si es administrador redirige al Superadmin
+                return $next($request); // si es administrador redirige al Superadmin
             break;
             case ('2'):
-                return $next($request); // si es administrador redirige al HOME
+                return redirect('home'); // si es administrador redirige al HOME
             break;
-            case ('3'):
+            case ('3'):  
+                // si es moredor lo dirige 
                 return redirect('moderador'); //si es administrador redirige al moderador
            break;
            case ('4'):
             return redirect('user'); // si es un usuario normal redirige a la ruta USER
             break;
-        
            
         }
-        //if(Auth::user()->fullacces == 'yes'):
-       //     return $next($request); // si es administrador redirigo al HOME
-       // endif;
-        //return redirect('/user');  si es un usuario normal redirigea la ruta USER 
     }
 }

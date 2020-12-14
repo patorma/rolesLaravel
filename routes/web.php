@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ModeradorController;
+use App\Http\Controllers\SuperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +24,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/user', [HomeController::class, 'getUser']);
+Route::get('/user', [HomeController::class, 'getUser'])->name('user');
+Route::get('/moderador',[ModeradorController::class,'index'])->name('moderador');
+Route::get('/superAdmin',[SuperController::class,'index'])->name('super');

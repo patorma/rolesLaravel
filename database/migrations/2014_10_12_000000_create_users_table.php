@@ -18,7 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('codigo')->unique();
-            $table->enum('fullacces',['yes','no'])->nullable();
+            $table->string('tipo')->nullable();
+            // 1 para admin 2 para super admin 3 para moderador 4 iser o visitante
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
