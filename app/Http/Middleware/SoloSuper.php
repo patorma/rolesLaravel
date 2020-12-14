@@ -25,7 +25,7 @@ class SoloSuper
                 return redirect('home'); // si es administrador redirige al HOME
             break;
             case ('3'):  
-                // si es moredor lo dirige 
+                // si es moderador lo dirige 
                 return redirect('moderador'); //si es administrador redirige al moderador
            break;
            case ('4'):

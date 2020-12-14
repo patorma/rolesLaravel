@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class SoloModerador
+class SoloUsuario
 {
     /**
      * Handle an incoming request.
@@ -26,12 +26,13 @@ class SoloModerador
             break;
             case ('3'):  
                 // si es moderador lo dirige 
-                return $next($request); //si es administrador redirige al moderador
+                return redirect('moderador');//si es administrador redirige al moderador
            break;
            case ('4'):
-            return redirect('user'); // si es un usuario normal redirige a la ruta USER
+            return $next($request); // si es un usuario normal redirige a la ruta USER
             break;
            
         }
     }
-}
+    }
+

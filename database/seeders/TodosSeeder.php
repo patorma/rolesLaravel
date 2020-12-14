@@ -21,14 +21,14 @@ class TodosSeeder extends Seeder
             'email' => 'superadmin@gmail.com',
             'password' => Hash::make('admin'),
             'tipo' => 1,
-            'codigo' => 'adm1',
+            //'codigo' => 'adm1',
         ]);
         $useradmin = User::create([
             'name' => 'super admin',
-            'email' => 'admins@gmail.com',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('admin'),
             'tipo' => 2,
-            'codigo' => 'admin2',
+            //'codigo' => 'admin2',
         ]);
 
         $useradmin = User::create([
@@ -36,7 +36,7 @@ class TodosSeeder extends Seeder
             'email' => 'moderadors@gmail.com',
             'password' => Hash::make('admin'),
             'tipo' => 3,
-            'codigo' => 'admin3',
+            //'codigo' => 'admin3',
         ]);
 
         $user1 = User::create([
@@ -44,7 +44,7 @@ class TodosSeeder extends Seeder
             'email' => 'marcos@gmail.com',
             'password' => Hash::make('marcos'),
             'tipo' => 4,
-            'codigo' => 'casa1',
+            //'codigo' => 'casa1',
         ]);
     }
 }
